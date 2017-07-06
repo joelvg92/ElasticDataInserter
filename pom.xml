@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>ElasticDataInserter</groupId>
   <artifactId>ElasticDataInserter</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+  <version>${app.version}</version>
   <build>
     <sourceDirectory>src</sourceDirectory>
     <plugins>
