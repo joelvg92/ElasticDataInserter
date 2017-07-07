@@ -1,8 +1,19 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>ElasticDataInserter</groupId>
+  <groupId>Elastic-DataInserter</groupId>
   <artifactId>ElasticDataInserter</artifactId>
-  <version>1.0.3-SNAPSHOT</version>
+  <version>1.0.0-SNAPSHOT</version>
+  <scm>
+    <connection>scm:git:https://github.com/joelvg92/ElasticDataInserter.git</connection>
+    <url>https://github.com/joelvg92/ElasticDataInserter</url>
+    <tag>HEAD</tag>
+  </scm>
+  <distributionManagement>
+    <repository>
+        <id>artifact-repository</id>
+        <url>http://localhost:8081/artifactory</url>
+    </repository>
+</distributionManagement>
   <build>
     <sourceDirectory>src</sourceDirectory>
     <plugins>
@@ -14,6 +25,18 @@
           <target>1.8</target>
         </configuration>
       </plugin>
+      <plugin>
+            <groupId>org.codehaus.mojo</groupId>
+            <artifactId>versions-maven-plugin</artifactId>
+            <version>2.1</version>
+        </plugin>
+        <plugin>
+            <artifactId>maven-scm-plugin</artifactId>
+            <version>1.8.1</version>
+            <configuration>
+                <tag>${project.artifactId}-${project.version}</tag>
+            </configuration>
+        </plugin>
     </plugins>
   </build>
   <dependencies>
@@ -23,6 +46,11 @@
     <version>1.1.1</version>
 </dependency>
 		<dependency>
+			<groupId>com.microsoft.azure</groupId>
+			<artifactId>azure-documentdb</artifactId>
+			<version>LATEST</version>
+		</dependency>
+		<dependency>
 			<groupId>org.elasticsearch</groupId>
 			<artifactId>elasticsearch</artifactId>
 			<version>5.2.0</version>
@@ -31,6 +59,11 @@
 			<groupId>org.javers</groupId>
 			<artifactId>javers-core</artifactId>
 			<version>3.0.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.microsoft.sqlserver</groupId>
+			<artifactId>sqljdbc4</artifactId>
+			<version>4.0</version>
 		</dependency>
 		<dependency>
 			<groupId>com.github.vanroy</groupId>
