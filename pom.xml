@@ -4,8 +4,7 @@
   <artifactId>ElasticDataInserter</artifactId>
   <version>1.0.0-SNAPSHOT</version>
   <scm>
-    <connection>scm:git:https://github.com/joelvg92/ElasticDataInserter.git</connection>
-    <url>https://github.com/joelvg92/ElasticDataInserter</url>
+    <connection>scm:git:https://github.com/joelvg92/ElasticDataInserter</connection>
     <tag>HEAD</tag>
   </scm>
   <distributionManagement>
